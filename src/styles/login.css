@@ -1,0 +1,40 @@
+.auth_form,
+.signup_form {
+  background: var(--primary-color);
+  padding: 20px;
+}
+.auth_btn {
+  background: #ffffff;
+  color: var(--primary-color);
+  font-weight: 600;
+  border: 0px;
+  padding: 8px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form_group input {
+  margin: 10px 0px;
+}
+.auth_form p {
+  margin-top: 30px;
+}
+.auth_form p a {
+  color: rgba(255, 255, 255, 0.735);
+}
+.auth_form h4,
+.signup_form h4 {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.signup_form input {
+  margin: 10px 0px;
+}
+.signup_form button {
+  margin: 15px 0px;
+}
+.signup_form input[type="file"] {
+  color: var(--primary-color);
+  cursor: pointer;
+  background: #ffffff;
+  padding: 5px 20px;
+}
