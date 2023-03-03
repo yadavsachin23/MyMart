@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Col, Container, Form, FormGroup, Row } from "reactstrap";
-import { db, storage, fs } from "../firebase.config";
+import { db, storage } from "../firebase.config";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -43,6 +43,7 @@ const AddProduct = () => {
               shortDesc: enterShortDesc,
               description: enterDescription,
               category: enterCategory,
+              price: enterPrice,
               imgUrl: downloadURL,
             });
           });
@@ -53,30 +54,8 @@ const AddProduct = () => {
       navigate("/dashboard/all-products");
     } catch (err) {}
     setLoading(false);
-    toast.error("Product not added!");
+    // toast.error("Product not added!");
   };
-
-  // const types = ["image/jpg", "image/jpeg", "image/png", "image/PNG"];
-  // const handleProductImg = (e) => {
-  //   let selectedFile = e.target.files[0];
-  //   if (selectedFile) {
-  //     if (selectedFile && types.includes(selectedFile.type)) {
-  //       setEnterProductImg(selectedFile);
-  //       // setImageError("Please select a valid file type");
-  //     } else {
-  //       setEnterProductImg(null);
-  //       // setImageError("Please select a valid file type");
-  //     }
-  //   } else {
-  //     toast.error("No file selected");
-  //   }
-  // };
-
-  // const addProduct = (e) => {
-  //   e.preventDefault();
-  //   const uploadTask = storage.ref(`productImage/${enterProductImg.name}`).put(enterProductImg);
-  //   uploadTask.on("state changed", snapshot=>{});
-  // };
 
   return (
     <section>
