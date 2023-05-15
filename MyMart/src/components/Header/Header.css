@@ -1,0 +1,166 @@
+.header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+}
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.logo img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 2.2rem;
+  margin-bottom: 0;
+}
+.nav_item a {
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+.navicons {
+  display: flex;
+  column-gap: 1.2rem;
+}
+.navicons span i {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.fav_icon,
+.cart_icon {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  width: 12px;
+  height: 12px;
+  content: "";
+  background: var(--primary-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  font-weight: 600;
+  z-index: 10;
+}
+.navicons .profile img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.navicons .profile {
+  position: relative;
+  z-index: 9;
+}
+.navicons .profile .profile_action {
+  position: absolute;
+  top: 98%;
+  left: 0;
+  width: 150px;
+  z-index: 10;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--card-bg-01);
+  line-height: 30px;
+  display: none;
+  cursor: pointer;
+}
+.show__profileAction {
+  display: block !important;
+}
+.mobile_menu {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  display: none;
+}
+.nav__active {
+  font-weight: 700 !important;
+}
+.sticky_header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 3px 3px 8px -3px #dddddd;
+  background: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.53);
+    z-index: 9999;
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 99999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .active_menu {
+    display: block;
+  }
+  .mobile_menu {
+    display: block;
+  }
+  .mobile_menu span i {
+    font-size: 1.1rem !important;
+  }
+  .logo img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .logo h1 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .fav_icon i,
+  .cart_icon i {
+    font-size: 1.2rem !important;
+  }
+  .navicons span img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+  }
+}
